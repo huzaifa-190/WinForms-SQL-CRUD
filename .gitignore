@@ -42,5 +42,5 @@ _ReSharper*/
 *.mdf
 *.ldf
 
-# Ignore auto-generated files
-*.designer.cs
+# Ignore auto-generated files (EXCEPT designer files)
+#*.designer.cs  <-- Removed to allow Form1.Designer.cs to be tracked
