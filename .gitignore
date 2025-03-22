@@ -1,0 +1,46 @@
+# Ignore Visual Studio specific files
+.vs/
+*.suo
+*.user
+*.cache
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Ignore build output
+bin/
+obj/
+Build/
+Generated/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Ignore logs and temporary files
+*.log
+*.tlog
+*.tmp
+*.pdb
+*.ilk
+
+# Ignore publish outputs
+publish/
+app.publish/
+
+# Ignore Rider/JetBrains IDE files (if using Rider)
+.idea/
+*.iml
+
+# Ignore Resharper files (if using Resharper)
+_ReSharper*/
+
+# Ignore database files (if using local database)
+*.mdf
+*.ldf
+
+# Ignore auto-generated files
+*.designer.cs
