@@ -4,13 +4,12 @@ A **Windows Forms** application for managing student records using a **SQL Serve
 
 ## ✨ Features  
 
-✅ **SQL Server** database integration 🗄️ 
+✅ **SQL Server** database integration 🐄️  
 ✅ **Add** new student records 📝  
 ✅ **Update** existing student details 🔄  
 ✅ **Delete** student entries ❌  
 ✅ **Navigate** through student records ⏩ ⏪  
 ✅ **Data validation** to ensure proper input ✅  
- 
 
 ## 🛠️ Technologies Used  
 
@@ -19,42 +18,50 @@ A **Windows Forms** application for managing student records using a **SQL Serve
 🔹 **Database:** SQL Server  
 🔹 **IDE:** Visual Studio  
 
-## 📥 Installation  
+## 💅🏻 Installation  
 
 ### 🔧 Prerequisites  
 Ensure you have the following installed:  
-- 🖥️ [Visual Studio](https://visualstudio.microsoft.com/)  
+- 🎥 [Visual Studio](https://visualstudio.microsoft.com/)  
 - ⚙️ [.NET Framework](https://dotnet.microsoft.com/)  
-- 🗄️ [SQL Server](https://www.microsoft.com/en-us/sql-server)  
+- 🐄️ [SQL Server](https://www.microsoft.com/en-us/sql-server)  
 
 ### 🚀 Steps to Set Up  
 
-1️⃣ **Clone the repository:**  
+1⃣ **Clone the repository:**  
    ```sh
-   git clone https://github.com/huzaifa-190/WinForms-SQL-CRUD
-   cd WinForms-Student-CRUD
+   git clone https://github.com/huzaifa-190/WinForms-SQL-CRUD.git
+   cd WinForms-SQL-CRUD
    ```  
-2️⃣ **Open the project** in **Visual Studio**.  
-3️⃣ **Configure** the database connection string in the constructor of `form1.cs` .  
-4️⃣ **Create Database** with the name you defined in the configuration string above.
-```sql
-   create DATABASE your-db-name
+
+2⃣ **Open the Solution File:**  
+   - Open `CRUD_Task.sln` in **Visual Studio**.  
+
+3⃣ **Configure the database connection**  
+   - open to `Form1.cs`.  
+   - Modify the **connection string** named as con in the constructor of Form1.cs to match your SQL Server setup.  
+
+4⃣ **Create Database** in SQL Server:  
+   ```sql
+   CREATE DATABASE your_db_name;
    ```  
-5️⃣ **Create a table** named Students in your database.   
-```sql
-CREATE TABLE Students (
-    id INT PRIMARY KEY IDENTITY(1,1),
-    name NVARCHAR(100) NOT NULL,
-    email NVARCHAR(100) UNIQUE,
-    password NVARCHAR(100) ,
-);
-```  
-6️⃣ **Build & Run** the application. 🎉  
+
+5⃣ **Create a table** named `Students`:  
+   ```sql
+   CREATE TABLE Students (
+       id INT PRIMARY KEY IDENTITY(1,1),
+       name NVARCHAR(100) NOT NULL,
+       email NVARCHAR(100) UNIQUE,
+       password NVARCHAR(100)
+   );
+   ```  
+
+6⃣ **Run the application:**  
+   - Click on **Run** in Visual Studio.  
 
 ## 🚀 Usage  
 
-1️⃣ **Open** the application 📂  
-2️⃣ **Click "Add"** to enter student details 📝  
-3️⃣ **Select a record** to edit or delete 🖊️ ❌  
-4️⃣ **Navigate** using the **"Next"** and **"Previous"** buttons ⏩ ⏪  
-
+1⃣ **Open** the application 📂  
+2⃣ **Click "Add"** to enter student details 📝  
+3⃣ **Select a record** to edit or delete 🖊️ ❌  
+4⃣ **Navigate** using the **"Next"** and **"Previous"** buttons ⏩ ⏪  
