@@ -344,37 +344,42 @@ namespace CRUD_Task
         }
 
 
+        //private void next_Click(object sender, EventArgs e)
+        //{
+        //    if (studentData.Rows.Count > 0)
+        //    {
+        //        // Ensure currentRecordIndex is within bounds after deletion
+        //        if (currentRecordIndex >= studentData.Rows.Count)
+        //        {
+        //            currentRecordIndex = 0; // Reset to first record if last was deleted
+        //        }
+
+        //        Console.WriteLine($"Current Index: {currentRecordIndex} | Records Length: {studentData.Rows.Count - 1}");
+
+        //        // If current displayed is last record => Display first record
+        //        if (currentRecordIndex == studentData.Rows.Count - 1)
+        //        {
+        //            currentRecordIndex = 0; // Loop back to first record
+        //        }
+        //        else
+        //        {
+        //            currentRecordIndex++; // Move to next record
+        //        }
+
+        //        DisplayRecord(currentRecordIndex);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("No records found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        currentRecordIndex = 0; // Reset index when no records exist
+        //    }
+        //}
+
         private void next_Click(object sender, EventArgs e)
         {
-            if (studentData.Rows.Count > 0)
-            {
-                // Ensure currentRecordIndex is within bounds after deletion
-                if (currentRecordIndex >= studentData.Rows.Count)
-                {
-                    currentRecordIndex = 0; // Reset to first record if last was deleted
-                }
-
-                Console.WriteLine($"Current Index: {currentRecordIndex} | Records Length: {studentData.Rows.Count - 1}");
-
-                // If current displayed is last record => Display first record
-                if (currentRecordIndex == studentData.Rows.Count - 1)
-                {
-                    currentRecordIndex = 0; // Loop back to first record
-                }
-                else
-                {
-                    currentRecordIndex++; // Move to next record
-                }
-
-                DisplayRecord(currentRecordIndex);
-            }
-            else
-            {
-                MessageBox.Show("No records found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                currentRecordIndex = 0; // Reset index when no records exist
-            }
+            currentRecordIndex = (currentRecordIndex + 1) % studentData.Rows.Count;
+            DisplayRecord(currentRecordIndex);
         }
-
 
         private void delete_click(object sender, EventArgs e)
         {
